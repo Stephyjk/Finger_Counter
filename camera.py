@@ -53,12 +53,12 @@ class VideoCapture(object):
             cv2.putText(img, str(totalFingers), (45, 375),
                         cv2.FONT_HERSHEY_PLAIN, 10, (255, 0, 0), 20)
 
-        cTime = time.time()
-        fps = 1/(cTime - pTime)
-        pTime = cTime
+        # cTime = time.time()
+        # fps = 1/(cTime - pTime)
+        # pTime = cTime
 
-        cv2.putText(img, f'FPS: {int(fps)}', (400, 70),
-                    cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
+        # cv2.putText(img, f'FPS: {int(fps)}', (400, 70),
+        #             cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
 
         ret, jpeg = cv2.imencode('.jpg', img)
         return jpeg.tobytes()

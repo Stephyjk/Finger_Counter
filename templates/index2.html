@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src='//cameratag.com/v14/js/cameratag.js' type='text/javascript'></script>
+<link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'>
 </head>
 <body>
-    <div style="margin: auto">
+    <div class="container">
         <h1>Finger Counter</h1>
         <br>
         <br>
         <div>
+            <camera id='finger-counter' data-app-id='a-62faac40-7deb-013a-2953-025c64289059'></camera>
             <img id="bg" src="{{url_for('video_feed')}}" />
         </div>
     </div>
