@@ -26,8 +26,8 @@ class VideoCapture(object):
         detector = htm.handDetector(detectionCon=0.75)
 
         tipIds = [4, 8, 12, 16, 20]
-        ret, frame = self.video.read()
-        img = detector.findHands(frame)
+        ret, img = self.video.read()
+        img = detector.findHands(img)
         lmList = detector.findPosition(img, draw=False)
         if len(lmList) != 0:
             fingers = []
